@@ -1,0 +1,142 @@
+/* Відео на фоні */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Контейнер з текстом */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стилі для заголовка */
+.content h1 {
+  font-size: 60px;
+  font-family: 'Savate', cursive;
+  color: rgb(90, 228, 124);
+  margin: 0;
+}
+
+/* Заголовки h3 */
+.content h3 {
+  line-height: 1;
+  font-family: "Bebas Neue", cursive;
+  font-size: 35px;
+  margin: 15px 0 8px 0;
+  color: rgb(49, 168, 214);
+}
+
+/* Списки */
+.content ul {
+  color: #ffffff;
+  text-shadow: 
+    -3px -3px 0 #000,  
+     3px -3px 0 #000000,
+    -3px  3px 0 #000000,
+     3px  3px 0 #000;
+  width: 80%;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+  line-height: 2;
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 30px;
+  font-family: "Yanone Kaffeesatz", cursive;
+}
+
+/* Картинка */
+.content img {
+  display: block;
+  margin: 10px auto 20px auto;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+/* H2 */
+.content h2 {
+  line-height: 1;
+  font-family: 'Savate', cursive;
+  font-size: 40px;
+  margin: 15px 0 8px 0;
+  color: rgb(90, 228, 124);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 20px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.social-icons a {
+  font-size: 50px;
+  color: #00ffcc;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(2);
+  color: #00ffcc;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content h3 {
+    font-size: 22px;
+  }
+
+  .content ul {
+    font-size: 18px;
+    width: 95%;
+    padding-left: 15px;
+  }
+
+  .content img {
+    max-width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 8px;
+  }
+}
